@@ -9,7 +9,7 @@ https://archive.org/
 ## setp 2: Clone the project
 git clone https://github.com/lintep/wikidump.git
 
-## step 3: install project
+## step 3: Install the project
 cd wikidump
 mvn install
 
