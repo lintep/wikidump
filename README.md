@@ -13,6 +13,7 @@ git clone https://github.com/lintep/wikidump.git
 
 ## step 3: Install the project
 cd wikidump
+
 mvn install
 
 ## step 4: Extract and do clean wiki documents from the dump file.
