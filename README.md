@@ -3,7 +3,9 @@ wikipedia dump handler
 
 ## step 1: Download wikipedia dump file
 find and download wiki dump *meta*.xml.bz2 file from below addresses
+
 https://dumps.wikimedia.org/
+
 https://archive.org/
 
 ## setp 2: Clone the project
