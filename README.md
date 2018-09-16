@@ -15,13 +15,13 @@ git clone https://github.com/lintep/wikidump.git
 cd wikidump
 mvn install
 
-## step 4: Extracting wiki documents from the dump file.
+## step 4: Extract and do clean wiki documents from the dump file.
 cd target
 
 java -cp lintep-wikidump-1.0.jar:lib/* corpus.wikipedia.WikiDoumpHandlerMain {args[0]: dump file xml.bz2 file address}
 
 each result file(*.newLineByLine) line is of a wikipedia raw document
 
-## step 5: Removing useless tags and character from cleaned the dump file.
+## step 5: Removing useless tags and characters from the cleaned dump file.
 
 java -cp lintep-wikidump-1.0.jar:lib/* corpus.wikipedia.spark.SparkExtractClearWikiText {args[0]: step 4 *.newLineByLine file address}
