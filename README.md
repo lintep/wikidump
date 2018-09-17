@@ -1,5 +1,6 @@
 # Wikidump
-wikipedia dump handler
+Java base project to handle Wikipedia dump file.
+Powered by _**spark**_
 
 ## step 1: Download wikipedia dump file
 find and download wiki dump *meta*.xml.bz2 file from below addresses
@@ -9,20 +10,20 @@ https://dumps.wikimedia.org/
 https://archive.org/
 
 ## setp 2: Clone the project
-git clone https://github.com/lintep/wikidump.git
+`git clone https://github.com/lintep/wikidump.git`
 
 ## step 3: Install the project
-cd wikidump
+`cd wikidump`
 
-mvn install
+`mvn install`
 
 ## step 4: Extract and do clean wiki documents from the dump file.
-cd target
+`cd target`
 
-java -cp lintep-wikidump-1.0.jar:lib/* corpus.wikipedia.WikiDoumpHandlerMain {args[0]: dump file xml.bz2 file address}
+`java -cp lintep-wikidump-1.0.jar:lib/* corpus.wikipedia.WikiDoumpHandlerMain {args[0]: dump file xml.bz2 file address}`
 
-each result file(*.newLineByLine) line is of a wikipedia raw document
+       each line of result file(*.newLineByLine) is one of the raw wikipedia document.
 
 ## step 5: Removing useless tags and characters from the cleaned dump file.
 
-java -cp lintep-wikidump-1.0.jar:lib/* corpus.wikipedia.spark.SparkExtractClearWikiText {args[0]: step 4 *.newLineByLine file address}
+`java -cp lintep-wikidump-1.0.jar:lib/* corpus.wikipedia.spark.SparkExtractClearWikiText {args[0]: step 4 *.newLineByLine file address}`
